@@ -1,0 +1,88 @@
+/* src/RaceDetail.css */
+.race-detail {
+  padding: 20px 24px 60px;
+  color: #fff;                
+  background: #0f0f0f;        
+  min-height: 100vh;
+}
+
+.back-btn {
+  background: transparent;
+  color: #9aa0a6;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+.back-btn:hover { color: #fff; border-color: #3a3a3a; }
+
+.title {
+  margin: 8px 0 4px;
+  font-size: 28px;
+  font-weight: 700;
+}
+.meta {
+  margin: 0 0 20px;
+  color: #b8b9bd;
+  font-size: 14px;
+}
+
+/* Podium */
+.podium .section-title,
+.results .section-title {
+  font-size: 20px;
+  margin: 18px 0 10px;
+  color: #fff;
+}
+.podium-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.podium-card {
+  background: #151515;
+  border: 1px solid #242424;
+  border-radius: 12px;
+  padding: 14px;
+}
+.podium-card .pos { font-weight: 700; color: #e10600; margin-bottom: 6px; }
+.podium-card .name .code { font-weight: 700; margin-right: 6px; }
+.podium-card .team { color: #cfcfcf; font-size: 14px; }
+.podium-card .time, .podium-card .status { color: #ddd; font-size: 14px; margin-top: 6px; }
+
+/* Results Table */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto; 
+}
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #121212;
+  border: 1px solid #232323;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.results-table th, .results-table td {
+  padding: 10px 12px;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid #232323;
+  white-space: nowrap;
+}
+.results-table thead th {
+  background: #171717;
+  color: #e5e5e5;
+  position: sticky;
+  top: 0;
+}
+.results-table tbody tr:hover {
+  background: #181818;
+}
+.pos-cell { font-weight: 700; color: #e10600; }
+.driver .code { font-weight: 700; margin-right: 6px; }
+.team-cell { color: #d5d5d5; }
+
+.empty { color: #b8b9bd; padding: 8px 0; }
+.loading { color: #b8b9bd; padding: 8px 0; }

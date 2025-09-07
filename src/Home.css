@@ -1,0 +1,158 @@
+:root {
+  --f1-red: #e10600;
+  --bg: #0b0b0c;
+  --panel: #151515;
+  --ink: #ffffff;
+  --muted: #9aa0a6;
+}
+
+
+.home {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(225, 6, 0, 0.15), transparent 60%),
+              radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.05), transparent 70%);
+  pointer-events: none;
+}
+.home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    120deg,
+    transparent 0 46px,
+    rgba(255, 255, 255, 0.03) 46px 48px
+  );
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+
+.logo {
+  width: 500px;
+  max-width: 80vw;
+  margin-bottom: 40px;
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.6));
+}
+
+.home-title {
+  position: relative;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin: -10px 0 30px;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+
+.f1-text {
+  background: linear-gradient(90deg, #ff2a2a, #e10600, #a00000);
+  background-clip: text;         
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  color: transparent;             
+  position: relative;
+}
+
+
+
+.data-text {
+  color: #fff;
+  margin-left: 6px;
+}
+
+
+.home-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 3px;
+  width: 100%;
+  background: var(--f1-red);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underlineGrow 1s ease forwards;
+}
+
+@keyframes underlineGrow {
+  to { transform: scaleX(1); }
+}
+
+
+
+.year-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+
+/* 버튼 */
+.year-btn {
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease, border-color 0.2s ease;
+}
+.year-btn:hover {
+  background: #1d1d1d;
+  border-color: var(--f1-red);
+  transform: translateY(-2px);
+}
+.year-btn:active {
+  transform: translateY(0);
+}
+.year-btn.active {
+  background: var(--f1-red);
+  color: #fff;
+  border: 1px solid var(--f1-red);
+}
+.year-btn.active:hover {
+  background: #c00500;
+  border-color: #c00500;
+}
+
+/* Disclaimer */
+.legal {
+  max-width: 800px;
+  margin-top: auto;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.4;
+  z-index: 1;
+}
+.legal a {
+  color: var(--f1-red);
+  text-decoration: none;
+}
+.legal a:hover {
+  text-decoration: underline;
+}

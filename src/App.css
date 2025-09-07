@@ -1,0 +1,23 @@
+:root {
+  --f1-red: #e10600;
+  --bg: #0f0f0f;
+  --fg: #ffffff;
+  --muted: #9aa0a6;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+
